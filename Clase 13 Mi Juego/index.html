@@ -9,12 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/winnerStyle.css">
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 <body>
 
-    <div id="MenuScreen" style="display: block;"> 
+    <div id="MenuScreen" style="display: none;"> 
         <audio autoplay loop>
             <source src="./src/sounds/01_game_menu.wav" type="audio/wav">
         </audio>
@@ -28,7 +30,19 @@
         </div>
     </div>
     
-    <div id="WinnerScreen" style="display: none;">
+    <div id="WinnerScreen" style="display: block;">
+
+        <span> Winner!</span>
+        <div class="container">
+            <div class="game">
+                <button id="claim">Play again!</button>
+            </div>
+        </div>
+
+        <div class="pyro">
+            <div class="before"></div>
+            <div class="after"></div>
+        </div>
     </div>
 
     <div id="LoserScreen" style="display: none;">
