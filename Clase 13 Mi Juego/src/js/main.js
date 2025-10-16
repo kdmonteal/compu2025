@@ -18,7 +18,7 @@ function loadAudio(valueSong) {
         break;
     }
 
-    document.querySelector("audio").play();
+    // document.querySelector("audio").play();
 }
 
 loadSceen(1);
@@ -26,26 +26,27 @@ loadSceen(1);
 function loadSceen(screen){
     switch (screen) {
         case 1: // Menu
-            changeVisibility('block','none','none');
+            changeVisibility('block','none', 'none','none');
             loadAudio(1);
         break;
         case 2: // Juego
-            changeVisibility('none','none','none');
+            changeVisibility('none','block', 'none','none');
             loadAudio(2);
         break;
         case 3: // Gano
-            changeVisibility('none','block','none');
+            changeVisibility('none','none', 'block','none');
             loadAudio(3);
         break;
         case 4: // Perdio
-            changeVisibility('none','none','block');
+            changeVisibility('none','none', 'none','block');
             loadAudio(4);
         break;
     }
 }
 
-function changeVisibility(menu, win, lose) {
+function changeVisibility(menu, game, win, lose) {
     document.getElementById("MenuScreen").style.display = menu;
+    document.getElementById("gameScreen").style.display = game;
     document.getElementById("WinnerScreen").style.display = win;
     document.getElementById("LoserScreen").style.display = lose;
 }

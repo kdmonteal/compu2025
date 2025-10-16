@@ -26,11 +26,10 @@ const additiveActions = {
 let panelSettings, numAnimations;
 
 init();
-animate(); 
 
 function init() {
 
-    const container = document.getElementById('mySceneContainer');
+    const container = document.getElementById('gameScreen');
     clock = new THREE.Clock();
 
     scene = new THREE.Scene();
@@ -79,7 +78,7 @@ function init() {
     container.appendChild(stats.dom);
 
     window.addEventListener('resize', onWindowResize);
-
+    animate(); 
 }
 
 function onWindowResize() {

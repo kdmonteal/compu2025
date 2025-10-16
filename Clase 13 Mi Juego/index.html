@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,33 +22,47 @@
           }
         }
     </script>
-    <script type="module" src="./src/js/myScene.js"></script>
-
 </head>
+
 <body>
 
-    <div id="mySceneContainer"></div>
-
-    <audio id="soundScreen" controls autoplay loop style="position: absolute; z-index: 99; margin-left: -10%; margin-top: 2%;">
+    <audio id="soundScreen" autoplay loop
+        style="position: absolute; z-index: 99; margin-left: -10%; margin-top: 2%;">
         <source src="" type="audio/wav">
     </audio>
 
-    <div id="MenuScreen" style="display: block;"> 
+    <div id="MenuScreen" style="display: block;">
         <span class="jittery"> My Game </span>
-    
+
         <div class="container">
             <div class="game">
                 <button id="playGame" onclick="loadSceen(2)">Play!</button>
             </div>
         </div>
     </div>
+
     
+    <div id="gameScreen" style="display: none;">
+
+        <div style="position: absolute; margin-left: 23%; margin-top: 3%;">
+            <button onclick="loadSceen(1)">Home</button>
+            <button onclick="loadSceen(3)">Winner</button>
+            <button onclick="loadSceen(4)">GameOver</button>
+        </div>
+    
+
+        <!-- <div class="box lives-box">
+            <div id="lifeline" class="lives">...</div>
+        </div> -->
+    </div>
+
+
     <div id="WinnerScreen" style="display: none;">
 
         <span> Winner!</span>
         <div class="container">
             <div class="game">
-                <button id="claim">Play again!</button>
+                <button id="playAgain" onclick="loadSceen(2)">Play again!</button>
             </div>
         </div>
 
@@ -62,22 +77,24 @@
         <span> Game Over</span>
         <div class="container">
             <div class="game">
-                <button id="claim">Play again!</button>
+                <button id="playAgain2" onclick="loadSceen(2)">Play again!</button>
             </div>
         </div>
 
 
         <div class="containerLose">
             <div class="sky">
-              <div class="stars"></div>
-              <div class="stars1"></div>
-              <div class="stars2"></div>
-              <div class="shooting-stars"></div>
+                <div class="stars"></div>
+                <div class="stars1"></div>
+                <div class="stars2"></div>
+                <div class="shooting-stars"></div>
             </div>
-          </div>
+        </div>
     </div>
-    
+
     <script src="./src/js/animationLetters.js"></script>
+    <script type="module" src="./src/js/myScene.js"></script>
     <script src="./src/js/main.js"></script>
 </body>
+
 </html>
