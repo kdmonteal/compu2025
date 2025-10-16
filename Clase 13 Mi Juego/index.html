@@ -10,27 +10,27 @@
 
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/css/winnerStyle.css">
+    <link rel="stylesheet" href="./src/css/loseStyle.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 <body>
+    <audio id="soundScreen" controls autoplay loop style="position: absolute; z-index: 99; margin-left: -10%; margin-top: 2%;">
+        <source src="" type="audio/wav">
+    </audio>
 
-    <div id="MenuScreen" style="display: none;"> 
-        <audio autoplay loop>
-            <source src="./src/sounds/01_game_menu.wav" type="audio/wav">
-        </audio>
-    
+    <div id="MenuScreen" style="display: block;"> 
         <span class="jittery"> My Game </span>
     
         <div class="container">
             <div class="game">
-                <button id="claim">Play!</button>
+                <button id="playGame">Play!</button>
             </div>
         </div>
     </div>
     
-    <div id="WinnerScreen" style="display: block;">
+    <div id="WinnerScreen" style="display: none;">
 
         <span> Winner!</span>
         <div class="container">
@@ -46,8 +46,26 @@
     </div>
 
     <div id="LoserScreen" style="display: none;">
+
+        <span> Game Over</span>
+        <div class="container">
+            <div class="game">
+                <button id="claim">Play again!</button>
+            </div>
+        </div>
+
+
+        <div class="containerLose">
+            <div class="sky">
+              <div class="stars"></div>
+              <div class="stars1"></div>
+              <div class="stars2"></div>
+              <div class="shooting-stars"></div>
+            </div>
+          </div>
     </div>
     
+    <script src="./src/js/animationLetters.js"></script>
     <script src="./src/js/main.js"></script>
 </body>
 </html>
