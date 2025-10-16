@@ -1,5 +1,4 @@
-var a = 0;
-
+loadAudio(1);
 function loadAudio(valueSong) {
   
   var audio = document.getElementById('soundScreen');
@@ -19,7 +18,34 @@ function loadAudio(valueSong) {
         break;
     }
 
-  audio.load();
+    document.querySelector("audio").play();
 }
 
-loadAudio(3);
+loadSceen(1);
+
+function loadSceen(screen){
+    switch (screen) {
+        case 1: // Menu
+            changeVisibility('block','none','none');
+            loadAudio(1);
+        break;
+        case 2: // Juego
+            changeVisibility('none','none','none');
+            loadAudio(2);
+        break;
+        case 3: // Gano
+            changeVisibility('none','block','none');
+            loadAudio(3);
+        break;
+        case 4: // Perdio
+            changeVisibility('none','none','block');
+            loadAudio(4);
+        break;
+    }
+}
+
+function changeVisibility(menu, win, lose) {
+    document.getElementById("MenuScreen").style.display = menu;
+    document.getElementById("WinnerScreen").style.display = win;
+    document.getElementById("LoserScreen").style.display = lose;
+}
