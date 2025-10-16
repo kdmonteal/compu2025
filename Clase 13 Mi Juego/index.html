@@ -13,9 +13,21 @@
     <link rel="stylesheet" href="./src/css/loseStyle.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+          }
+        }
+    </script>
+    <script type="module" src="./src/js/myScene.js"></script>
 
 </head>
 <body>
+
+    <div id="mySceneContainer"></div>
+
     <audio id="soundScreen" controls autoplay loop style="position: absolute; z-index: 99; margin-left: -10%; margin-top: 2%;">
         <source src="" type="audio/wav">
     </audio>
