@@ -5,12 +5,27 @@
 }
 
 body {
-    background: #06c5f0 repeating-linear-gradient(135deg, transparent, transparent 1em, rgba(255, 255, 255, 0.1) 1em, rgba(255, 255, 255, 0.1) 2em);
-    color: #f7f6f3;
     font-family: "IBM Plex Mono", monospace;
     font-size: 1em;
-    height: 100vh;
     text-align: center;
+}
+
+#MenuScreen{
+    background: #06c5f0 repeating-linear-gradient(135deg, transparent, transparent 1em, rgba(255, 255, 255, 0.1) 1em, rgba(255, 255, 255, 0.1) 2em) !important;
+    color: #f7f6f3;
+    height: 100vh;
+}
+
+#WinnerScreen{
+    background: #06f09e repeating-linear-gradient(135deg, transparent, transparent 1em, rgba(255, 255, 255, 0.1) 1em, rgba(255, 255, 255, 0.1) 2em) !important;
+    color: #f7f6f3;
+    height: 100vh;
+}
+
+#LoserScreen{
+    background: #0c1713 repeating-linear-gradient(135deg, transparent, transparent 1em, rgba(255, 255, 255, 0.1) 1em, rgba(255, 255, 255, 0.1) 2em) !important;
+    color: #f7f6f3;
+    height: 100vh;
 }
 
 span {

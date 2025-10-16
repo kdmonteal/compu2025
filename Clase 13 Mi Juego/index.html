@@ -13,16 +13,25 @@
 
 </head>
 <body>
-    <audio autoplay loop>
-        <source src="./src/sounds/01_game_menu.wav" type="audio/wav">
-    </audio>
 
-    <span class="jittery"> My Game </span>
-
-    <div class="container">
-        <div class="game">
-            <button id="claim">Play!</button>
+    <div id="MenuScreen" style="display: block;"> 
+        <audio autoplay loop>
+            <source src="./src/sounds/01_game_menu.wav" type="audio/wav">
+        </audio>
+    
+        <span class="jittery"> My Game </span>
+    
+        <div class="container">
+            <div class="game">
+                <button id="claim">Play!</button>
+            </div>
         </div>
+    </div>
+    
+    <div id="WinnerScreen" style="display: none;">
+    </div>
+
+    <div id="LoserScreen" style="display: none;">
     </div>
     
     <script src="./src/js/main.js"></script>
