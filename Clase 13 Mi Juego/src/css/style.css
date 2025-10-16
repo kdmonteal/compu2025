@@ -1,12 +1,27 @@
-body {
-    font: 400 140px/1em Amatic SC;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: #06c5f0 repeating-linear-gradient(135deg, transparent, transparent 1em, rgba(255,255,255,0.1) 1em, rgba(255,255,255,0.1) 2em);
+    color: #f7f6f3;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1em;
+    height: 100vh;
     text-align: center;
-    padding-top: 140px
-}
+  }
+
+  span{
+    font: 600 200px/1em "Amatic SC", sans-serif;
+    font-style: normal;
+    padding-top: 140px;
+  }
 
 .jittery span {
     animation: jitter 200ms linear infinite;
-    color: #f06d06;
+    color: #ffffff;
     display: inline-block
 }
 
