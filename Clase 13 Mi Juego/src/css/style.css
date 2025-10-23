@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-.gameScreen{
+.gameScreen {
     width: 200px;
 }
 
@@ -14,7 +14,7 @@ body {
     text-align: center;
 }
 
-#MenuScreen{
+#MenuScreen {
     background: #06c5f0 repeating-linear-gradient(135deg, transparent, transparent 1em, rgba(255, 255, 255, 0.1) 1em, rgba(255, 255, 255, 0.1) 2em) !important;
     color: #f7f6f3;
     height: 100vh;
@@ -23,14 +23,14 @@ body {
     z-index: 99;
 }
 
-#WinnerScreen{
+#WinnerScreen {
     background: #059d68 repeating-linear-gradient(135deg, transparent, transparent 1em, rgba(255, 255, 255, 0.1) 1em, rgba(255, 255, 255, 0.1) 2em) !important;
     color: #f7f6f3;
     height: 100vh;
     padding-top: 10%;
 }
 
-#LoserScreen{
+#LoserScreen {
     color: #f7f6f3;
     height: 100vh;
     padding-top: 10%;
@@ -164,4 +164,10 @@ h3 {
 
 .lives-box {
     background: #ff7575;
+}
+
+#PauseScreen {
+    position: absolute;
+    margin-left: 23%;
+    margin-top: 20%;
 }

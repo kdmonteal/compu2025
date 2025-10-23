@@ -102,15 +102,11 @@ const vector2 = new THREE.Vector3();
 const vector3 = new THREE.Vector3();
 
 document.addEventListener( 'keydown', ( event ) => {
-
     keyStates[ event.code ] = true;
-
 } );
 
 document.addEventListener( 'keyup', ( event ) => {
-
     keyStates[ event.code ] = false;
-
 } );
 
 container.addEventListener( 'mousedown', () => {
@@ -348,6 +344,10 @@ function controls( deltaTime ) {
 
     // gives a bit of air control
     const speedDelta = deltaTime * ( playerOnFloor ? 25 : 8 );
+
+    if(keyStates['Escape']){
+        document.getElementById("PauseScreen").style.display = "block";
+    }
 
     if ( keyStates[ 'KeyW' ] ) {
 
